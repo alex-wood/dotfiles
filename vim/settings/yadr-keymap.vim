@@ -157,3 +157,40 @@ map ,hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 
 " ,hp = html preview
 map <silent> ,hp :!open -a Safari %<CR><CR>
+
+" In your ~/.vimrc
+" gary bernhardt's hashrocket
+imap <c-l> <space>=><space>
+
+" ctrl-l - next tab
+" ctrl-h - previous tab
+map  <C-l> :tabn<CR>
+map  <C-h> :tabp<CR>
+
+" :nt as a shortcut for opening NERDTree
+map :nt <Esc>:NERDTreeToggle<CR>
+
+" Open the project tree and expose current file in the nerdtree with Ctrl-\
+nnoremap <silent> <C-\> :NERDTreeFind<CR>:vertical res 30<CR>
+
+" Enable indentation with tab and shift-tab in visual mode
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
+
+" Shift-Tab to de-indent current line (insert mode)
+imap <S-Tab> <C-o><<
+
+" Normal mode
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+
+" Insert mode
+inoremap <C-j> <ESC>:m .+1<CR>==gi
+inoremap <C-k> <ESC>:m .-2<CR>==gi
+
+" Visual mode
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
+
+map :tn :tabe
+map :tc :tabclose
