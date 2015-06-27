@@ -20,7 +20,7 @@ set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 
 """""""""""""""""""""""""""""""""""""""""""""
-Multiple Cursors Bug Workaround
+" Multiple Cursors Bug Workaround
 """""""""""""""""""""""""""""""""""""""""""""
 set mouse=a
 set relativenumber
